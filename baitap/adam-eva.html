@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rwed</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor() {
+            this.weight = 10
+        }
+
+        getWeight() {
+            return this.weight
+        }
+
+        isEmpty() {
+            if (this.weight > 0) {
+                return true
+            }
+            return false
+        }
+
+        decrease() {
+            this.weight--
+        }
+
+
+    }
+
+    class Human {
+        constructor(name, gender, weight,) {
+            this.name = name
+            this.gender = gender
+            this.weight = weight
+        }
+
+        isMale() {
+            if (this.gender == 'Male') return true
+            return false
+        }
+
+        getName() {
+            return this.name
+        }
+
+        getGender() {
+            return this.gender
+        }
+
+        getWeight() {
+            return this.weight
+        }
+
+        Eat(Apple) {
+            if (Apple.weight > 0) {
+                this.weight += 1
+                Apple.decrease()
+            } else {
+                alert(Apple + ' đã bị ăn hết')
+            }
+        }
+
+        CheckApple(Apple) {
+            let a = Apple.weight
+            return a
+        }
+
+        Say() {
+            let a = Math.floor((Math.random() * 10) + 1)
+            switch (a) {
+                case 1: {
+                    return 'Hello my friend'
+                }
+                case 2: {
+                    return "I'm hungry"
+                }
+                case 3: {
+                    return 'can you give me apple'
+                }
+                case 4: {
+                    return "i'm so beautiful "
+                }
+                case 5: {
+                    return 'maybe i got fat'
+                }
+                case 6: {
+                    return "It's boring here"
+                }
+                case 7: {
+                    return 'Do you know what my name is?'
+                }
+                case 8: {
+                    return 'Do you want to hang out with me?'
+                }
+                case 9: {
+                    return 'goodbye!!'
+                }
+                case 10: {
+                    return 'Thanh is so handsome'
+                }
+
+            }
+        }
+
+        setGender(a) {
+            if (a) {
+                this.gender = 'Male'
+            }
+            else {
+                this.gender= 'Female'
+            }
+        }
+        setName(a){
+            this.name=a
+        }
+        setWeight(a){
+            this.weight=a
+        }
+    }
+
+    let Adam = new Human('Adam', 'Male', 65)
+    let Apple1 = new Apple()
+</script>
+</body>
+</html>

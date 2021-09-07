@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rwed</title>
+</head>
+<body>
+<div id="lamp"> </div>
+<script>
+    class ElectricLamp {
+        constructor() {
+            this.status=false
+        }
+        turnOff(){
+            this.status=false
+            document.getElementById('lamp').innerHTML='lighting off'
+        }
+        turnOn(){
+            this.status=true
+            document.getElementById('lamp').innerHTML='lighting on'
+        }
+    }
+    class SwitchButton {
+        constructor() {
+            this.status=false
+        }
+        connectToLamp(Lamp1){
+            this.lamp=Lamp1
+        }
+        switchOn(){
+            this.status=true
+            this.lamp.turnOn()
+        }
+        switchOff(){
+            this.status=false
+            this.lamp.turnOff()
+        }
+    }
+    let a=document.getElementById('a')
+    let Lamp1=new ElectricLamp(false)
+    let Button1=new SwitchButton(false)
+    Lamp1.turnOn()
+</script>
+</body>
+</html>
